@@ -1,3 +1,8 @@
+/* Lotide is the first project where we are working to create a library, which
+will be a clone of the commonly used Lodash library */
+
+
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
