@@ -9,12 +9,12 @@ const assertEqual = function(actual, expected) {
 let testArray = ["a", "b", "c"];
 
 //processing
-const head = function(array){
- return array[0];
-}
+const head = function(array) {
+  return array[0];
+};
 
 
-//output 
+//output
 console.log(head(testArray));
 
 assertEqual(head([1,2,3]), 1);
