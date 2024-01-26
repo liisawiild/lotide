@@ -40,4 +40,9 @@ const middle = function(array) {
 // console.log(middle(myArray));
 
 let array2 = [1, 2, 3, 4];
+let expectedArray = [2, 3];
 console.log(middle(array2));
+
+
+assertArraysEqual(array2, expectedArray);
+eqArrays(array2, middle(array2));
