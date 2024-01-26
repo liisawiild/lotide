@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
 };
 
 
-let arrayOne = [1, 2, 3, 4];
+let arrayOne = [1, 2, 3];
 let arrayTwo = [1, 2, 3];
 
 const eqArrays = function(arr1, arr2) {
