@@ -12,10 +12,12 @@ const countLetters = function(word) {
   let letterCount = {};
 
   for (const character of word) {
-    if (letterCount[character]) {
-      letterCount[character] += 1;
-    } else if (character != " ") {
-      letterCount[character] = 1;
+    if (character != " ") {
+      if (letterCount[character]) {
+        letterCount[character] += 1;
+      } else if (character != " ") {
+        letterCount[character] = 1;
+      }
     }
   } return letterCount;
 };
