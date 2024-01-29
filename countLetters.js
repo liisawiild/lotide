@@ -6,17 +6,25 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+let myString = "LISA WILD";
 
 const countLetters = function(word) {
   let letterCount = {};
 
-  for (var letter of word) {
-    console.log(letter);
-  }
-//take a string
-// loop through the letters in the string
-// count how many of each letter present
-  return letterCount;
+  for (const character of word) {
+    if (letterCount[character]) {
+      letterCount[character] += 1;
+    } else if (character != " ") {
+      letterCount[character] = 1;
+    }
+  } return letterCount;
 };
 
-countLetters("Lisa Wild");
+
+let result = countLetters(myString);
+console.log(result);
+
+assertEqual(result["L"], 2);
+assertEqual(result["I"], 2);
+assertEqual(result["E"], undefined);
+assertEqual(result[" "], undefined);
