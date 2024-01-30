@@ -11,33 +11,40 @@ const eqArrays = function(arr1, arr2) {
 };
 
 const assertArraysEqual = function(arr1, arr2) {
-  if(eqArrays(arr1, arr2)) {
-    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`)
+  if (eqArrays(arr1, arr2)) {
+    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
   }
 
 };
 
-let myString = "Lisa Wild"
+let myString = "lisa wild";
 
 const letterPositions = function(sentence) {
   const results = {};
   let characterIndex = 0;
   // loop through the sentence
   for (let character of sentence) {
-
-    characterIndex++
-    console.log(characterIndex);
-  }
-  
   // if the character is a not a " " and
-  // if the character has already appeared add  to results[i] array --> results[i].push(i)
-  // add index to key pair value's array
+    if (character !== " ") {
+      if (results[character]) {
+        results[character].push(characterIndex); // add key and array with value pair (if not yet appeared)
+      } else {
+        results[character] = [characterIndex]; // if not yet in object, add it with an array
+      }
+    }
+    characterIndex++;
+  }
   return results;
 };
 
-letterPositions(myString);
+console.log(letterPositions(myString));
 
 // TEST CODE
-//assertArraysEqual(letterPostions("chips").i, [2]);
+assertArraysEqual(letterPositions("chips").i, [2]);
+assertArraysEqual(letterPositions("audrey wild").d, [2, 10]);
+assertArraysEqual(letterPositions("fuzzy wuzzy").z, [2, 3, 8, 9]);
+
+
+
