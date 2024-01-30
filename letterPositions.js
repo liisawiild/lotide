@@ -19,7 +19,7 @@ const assertArraysEqual = function(arr1, arr2) {
 
 };
 
-let myString = "lisa wild";
+
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -29,9 +29,9 @@ const letterPositions = function(sentence) {
   // if the character is a not a " " and
     if (character !== " ") {
       if (results[character]) {
-        results[character].push(characterIndex); // add key and array with value pair (if not yet appeared)
+        results[character].push(characterIndex); 
       } else {
-        results[character] = [characterIndex]; // if not yet in object, add it with an array
+        results[character] = [characterIndex]; 
       }
     }
     characterIndex++;
@@ -39,7 +39,7 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-console.log(letterPositions(myString));
+
 
 // TEST CODE
 assertArraysEqual(letterPositions("chips").i, [2]);
