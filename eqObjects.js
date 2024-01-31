@@ -22,11 +22,11 @@ const eqObjects = function(obj1, obj2) {
   if (Object.keys(obj1).length !== Object.keys(obj2).length) {
     return false;
   }
-  for (const key of Object.keys(obj1)) { //the key is the first key in the array = in this example "color"
-    if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) { //if the key's value an array
-      return eqArrays(obj1[key], obj2[key]); //run through our eqArray function
+  for (const key of Object.keys(obj1)) { 
+    if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) { 
+      return eqArrays(obj1[key], obj2[key]); 
     } else {
-      if (obj1[key] !== obj2[key]) { //and then it is pulling the key back into the object to find the value
+      if (obj1[key] !== obj2[key]) { 
         return false;
       }
     }  
