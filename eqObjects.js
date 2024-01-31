@@ -14,8 +14,9 @@ const eqArrays = function(arr1, arr2) {
       if (arr1[i] !== arr2[i]) {
         return false;
       }
-    } return true;
-  }
+    } 
+    return true;
+  } 
 };
 
 const eqObjects = function(obj1, obj2) {
@@ -24,7 +25,7 @@ const eqObjects = function(obj1, obj2) {
   }
   for (const key of Object.keys(obj1)) { 
     if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) { 
-      if (eqArrays(obj1[key], obj2[key]) === false) { 
+      if (!eqArrays(obj1[key], obj2[key])) { 
         return false;
       }
     } else {
