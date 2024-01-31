@@ -6,7 +6,8 @@ const eqArrays = function(arr1, arr2) {
       if (arr1[i] !== arr2[i]) {
         return false;
       }
-    } return true;
+    } 
+    return true;
   }
 };
 
@@ -25,12 +26,12 @@ let flatArray = [];
 for (let i = 0; i < array.length; i++) {
   if (Array.isArray(array[i])) {
    flatArray = flatArray.concat(array[i]);
-    }
-   else {
+  } else {
       flatArray.push(array[i]);
-  } 
+  }
 } return flatArray;
 };
+
 //TEST CODE
 const myArray = [1, 2, [3, 4], 5, [6, 7], 6];
 console.log(flatten(myArray));

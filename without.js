@@ -6,7 +6,8 @@ const eqArrays = function(arr1, arr2) {
       if (arr1[i] !== arr2[i]) {
         return false;
       }
-    } return true;
+    } 
+    return true;
   }
 };
 
@@ -45,7 +46,7 @@ assertArraysEqual(testArray, [1, 2, 1, 2, 3, 4, 5, 3, 1, 2]);
 
 
 
-
+// INITIAL TRY WITHOUT PROTOTYPE FUNCTIONS
 // const without = function(sourceArray, itemsToRemove) {
 //   let arrayItemsRemoved = [];
 //   for (let i = 0; i < sourceArray.length; i++) {

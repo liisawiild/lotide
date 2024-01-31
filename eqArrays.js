@@ -7,11 +7,7 @@ const assertEqual = function(actual, expected) {
 };
 
 
-let arrayOne = [1, 2, 3];
-let arrayTwo = [1, 2, 3];
-
 const eqArrays = function(arr1, arr2) {
-  //loop through arr1
   if (arr1.length !== arr2.length) {
     return false;
   } else {
@@ -19,10 +15,13 @@ const eqArrays = function(arr1, arr2) {
       if (arr1[i] !== arr2[i]) {
         return false;
       }
-    } return true;
+    } 
+    return true;
   }
 };
-console.log(eqArrays(arrayOne, arrayTwo));
-
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 2, 3], [1, 2, 4]), false);
+assertEqual(eqArrays([], []), true);
+assertEqual(eqArrays(["test", "123"], ["test", "123"]), true);
+assertEqual(eqArrays(["test", "123"], ["tes", "123"]), false);
