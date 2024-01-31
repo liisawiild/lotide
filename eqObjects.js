@@ -23,9 +23,13 @@ const eqObjects = function(obj1, obj2) {
     return false;
   }
   for (const key of Object.keys(obj1)) { //the key is the first key in the array = in this example "color"
-    if (obj1[key] !== obj2[key]) {  //and then it is pulling the key back into the object to find the value
-      return false;
-    }
+    if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) { //if the key's value an array
+      return eqArrays(obj1[key], obj2[key]); //run through our eqArray function
+    } else {
+      if (obj1[key] !== obj2[key]) { //and then it is pulling the key back into the object to find the value
+        return false;
+      }
+    }  
   } return true;
 };
 
