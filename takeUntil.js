@@ -1,14 +1,13 @@
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    } 
-    return true;
-  }
+  } 
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  } 
+  return true;
 };
 
 const assertArraysEqual = function(actual, expected) {
@@ -22,11 +21,11 @@ const assertArraysEqual = function(actual, expected) {
 
 const takeUntil = function(array, callback) {
   let results = [];
-  for (let item of array) {    // loop through array from the beginning,
+  for (let item of array) {    
     if(!callback(item)) {      // callback only receives one value, the item in the array       
         results.push(item);
       } else {
-        return results;        // will loop until the callback returns truthy    
+        break;        // will loop until the callback returns truthy    
     }
   }
   return results;
