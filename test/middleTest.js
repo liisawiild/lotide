@@ -7,6 +7,6 @@ console.log(middle(myArray));
 
 let array2 = [1, 2, 3, 4];
 let expectedArray = [2, 3];
-console.log(middle(array2));
+console.log(middle(array2)); 
 
 assertArraysEqual(middle(array2), expectedArray);
