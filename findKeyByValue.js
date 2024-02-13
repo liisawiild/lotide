@@ -21,7 +21,7 @@ const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire",
-  comedy: "The Office",
+  comedy: "The Office", // this will overwrite the one above, and therefore will never print "Brooklyn Nine-Nine"
   reality: "Love on the Spectrum"
 };
 
