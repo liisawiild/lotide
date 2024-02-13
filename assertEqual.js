@@ -1,5 +1,5 @@
-/* Lotide is the first project where we are working to create a library, which
-will be a clone of the commonly used Lodash library */
+/* Lotide is the first project where we are working to create a library, 
+   which will be a clone of the commonly used Lodash library */
 
 //this function can only compare primitive values, not structures
 
@@ -11,9 +11,4 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual("Lisa", "Lisa");
-assertEqual(1, 1);
-assertEqual(2, 3);
-
-
+module.exports = assertEqual;
