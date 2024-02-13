@@ -1,22 +1,21 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-//TEST CODE
-let abcArray = ["a", "b", "c"];
-let emptyArray = [];
-let oneArray = [2];
+describe("#tail", () => {
+  it("returns ['b', 'c'] when provided with ['a', 'b', 'c']", () => {
+  assert.deepEqual(tail(['a', 'b', 'c']), ['b', 'c']);
+  });
 
-const result = tail(abcArray);
-assertEqual(abcArray.length, 3);
-assertEqual(result.length, 2);
-assertEqual(result[0], "b");
+  it("returns [] when provided with []", () => {
+    assert.deepEqual(tail([]), []);
+    });
 
-const emptyResult = tail(emptyArray);
-assertEqual(emptyArray.length, 0);
-assertEqual(emptyResult.length, 0);
-assertEqual(emptyResult[0], undefined);
+  it("returns [] when provided with [2]", () => {
+    assert.deepEqual(tail([2]), []);
+    });
 
-const oneResult = tail(oneArray);
-assertEqual(oneArray.length, 1);
-assertEqual(oneResult.length, 0);
-assertEqual(oneResult[0], undefined);
+  it("returns ['welcome', 'to', 'unit', 'testing'] when provided with ['Hello', 'welcome', 'to', 'unit', 'testing']", () => {
+    assert.deepEqual(tail(['Hello', 'welcome', 'to', 'unit', 'testing']), ['welcome', 'to', 'unit', 'testing']);
+    });
+
+});
