@@ -1,3 +1,6 @@
+/**this function takes in two objects and returns 
+ * true if the objects are the same */
+
 const eqArrays = require('./eqArrays');
 
 const eqObjects = function(obj1, obj2) {

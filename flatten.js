@@ -1,3 +1,7 @@
+/**This function takes in a multi-nested array and
+ * outputs an array without any nested elements */
+
+
 const flatten = function(array) {
 let flatArray = [];
 for (let i = 0; i < array.length; i++) {

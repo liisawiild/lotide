@@ -1,3 +1,6 @@
+/**this function returns assertion result messages
+ * after comparing two objects to see if they are equal */
+
 const eqObjects = require('./eqObjects');
 
 const assertObjectsEqual = function(actual, expected) {

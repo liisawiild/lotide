@@ -1,10 +1,16 @@
+/**this function takes in an array and a boolean callback
+ * and returns a new array with elements from the input array 
+ * that resulted in true after being passed through the 
+ * callback */
+
+
 const takeUntil = function(array, callback) {
   let results = [];
   for (let item of array) {    
-    if(!callback(item)) {      // callback only receives one value, the item in the array       
+    if(!callback(item)) {             
         results.push(item);
       } else {
-        break;        // will loop until the callback returns truthy    
+        break;            
     }
   }
   return results;

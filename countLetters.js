@@ -1,3 +1,7 @@
+/** this function takes in a string and returns an object
+ * that tallies the number of times each letter appears in 
+ * the string. */
+
 const countLetters = function(word) {
   let letterCount = {};
 

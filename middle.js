@@ -1,3 +1,9 @@
+/**this function takes in an array and returns a new
+ * array that only contains the middle elements 
+ * (array with even length = two elements; array with
+ *  odd lenths one element) */
+
+
 const middle = function(array) {
   let midArray = [];
   let length = array.length;
