@@ -8,5 +8,6 @@ console.log(result);
 
 assertEqual(result["L"], 2);
 assertEqual(result["I"], 2);
+assertEqual(result["W"], 1);
 assertEqual(result["E"], undefined);
 assertEqual(result[" "], undefined);

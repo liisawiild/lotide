@@ -5,4 +5,6 @@ const flatten = require('../flatten');
 const myArray = [1, 2, [3, 4], 5, [6, 7], 6];
 console.log(flatten(myArray));
 
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6, 7], 6]), [1, 2, 3, 4, 5, 6, 7, 6])
+assertArraysEqual(flatten([1, 2, [3, 4], 5, [6, 7], 6]), [1, 2, 3, 4, 5, 6, 7, 6]);
+assertArraysEqual(flatten([1, 2, [3], 4, 5, [6, 7, 6]]), [1, 2, 3, 4, 5, 6, 7, 6]);
+assertArraysEqual(flatten([[1, 2, 3, 4, 5, 6, 7, 6]]), [1, 2, 3, 4, 5, 6, 7, 6]);

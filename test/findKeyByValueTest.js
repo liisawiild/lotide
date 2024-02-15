@@ -15,3 +15,5 @@ assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 assertEqual(findKeyByValue(bestTVShowsByGenre, "Love on the Spectrum"), "reality");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "Love Island"), undefined);
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), undefined);
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Office"), "comedy");
