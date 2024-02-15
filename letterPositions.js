@@ -1,12 +1,10 @@
-/**this function loops through a sentence and each new 
- * character is added as a key-pair value (character: index) */
+/**this function takes in a string and returns an objects
+ * containing all characters and their indexes (character: index) */
 
 const letterPositions = function(sentence) {
   const results = {};
   let characterIndex = 0;
-  // loop through the sentence
   for (let character of sentence) {
-  // if the character is a not a " " 
     if (character !== " ") {
       if (results[character]) {
         results[character].push(characterIndex); 

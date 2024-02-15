@@ -1,6 +1,4 @@
-/* in this code we are running an array through a function to return the 
-   first value, and testing that the results you expect are what is produced 
-   by running it through the assertEqual function */
+/** this function takes in an array and returns the first element in the array */
 
 const head = function(array) {
   return array[0];
